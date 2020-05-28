@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device−width initial−scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Tour Virtual Cartagena</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/umb.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            Práctica A-Frame
+          </a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ejercicio 1: Creación de escena básica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tourvirtual.html">Ejercicio 2: creación de un tour virtual</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</header>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="a1" alt="La Torre del Reloj" src="assets/img/torrereloj.jpg" />
+            <img id="a2" alt="El monumento India Catalina" src="assets/img/india-catalina.jpg" />
+            <img id="a3" alt=" El Muelle de los pegasos" src="assets/img/muelle-lospegasos.jpg" />
+            <img id="a4" alt="El Museo Naval Cartagena" src="assets/img/museo-naval.jpg" />
+            <img id="a5" alt="El Castillo de San felipe" src="assets/img/castillo-sanfelipe.jpg" />
+            <img id="a6" alt="El Teatro Heredia" src="assets/img/teatro-heredia.jpg" />
+            <img id="a7" src="assets/img/bandera.png">
+        </a-assets>
+        <a-image src="#a1" position="-1.5 2.3 -3" onclick="show('a1')"></a-image>
+        <a-image src="#a2" position="0.5 2.3 -3" onclick="show('a2')"></a-image>
+        <a-image src="#a3" position="2.5 2.3 -3" onclick="show('a3')"></a-image>
+        <a-image src="#a4" position="-1.5 0.3 -3" onclick="show('a4')"></a-image>
+        <a-image src="#a5" position="0.5 0.3 -3" onclick="show('a5')"></a-image>
+        <a-image src="#a6" position="2.5 0.3 -3" onclick="show('a6')"></a-image>
+
+        <a-text align="center" value="Tour Cartagena de Indias" position="0 3.5 -3" font="exo2bold" color="black">
+        </a-text>
+
+        <a-image src="#a7" position="2 3.5 -3">
+            <a-animation attribute="rotation" repeat="indefinite" from="0 0 0" to="0 360 0" direction="forward"
+                dur=2000>
+            </a-animation> 
+        </a-image>
+        <a-text id="descripcion" align="center" font="dejavu" color="black" value="" position="0 3 -3">
+        </a-text>
+        <a-sky src="#a3" id="cielo"></a-sky>
+        <a-camera>
+            <a-cursor color="white"></a-cursor>
+        </a-camera>
+    </a-scene>
+    <script src="assets/js/tourvirtual.js"></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+<!-- Footer -->
+<footer class="footer">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#"> Marcela Andrea Bula Torres. UMB</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+</html>

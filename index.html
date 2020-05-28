@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device−width initial−scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Primitivas A-Frame</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/umb.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            Práctica A-Frame
+          </a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ejercicio 1: Creación de escena básica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tourvirtual.html">Ejercicio 2: creación de un tour virtual</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</header>
+
+<body>
+    <a-scene background="color: #FAFAFA">
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+         <!-- box adicional color rosa. -->
+         <a-box position="-3 0.5 -3" rotation="0 45 0" color="#F691F8" shadow></a-box>
+         <!-- sphere adicional color lila. -->
+        <a-sphere position="0 0.4 -2" radius="0.2" color="#BC6FFB" shadow></a-sphere>
+        <!-- cylinder adicional color naranja. -->
+        <a-cylinder position="3 0.75 -3" radius="0.5" height="1.5" color="#FA6C42" shadow></a-cylinder>
+        <!-- Duplicar el width de 4 a 8 para que estén todas las figuras encima del plane. -->
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="8" height="4" color="#7BC8A4" shadow></a-plane>
+    </a-scene>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+<!-- Footer -->
+<footer class="footer">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#"> Marcela Andrea Bula Torres. UMB</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+</html>
